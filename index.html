@@ -1,27 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic</title>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
 
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      color: blue;
-
+      background-color: aqua;
+    }
+    /* TODO 1: Use the grid-template-columns property plus the repeat and minmax functions and the keyword auto-fit to set up your grid */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+      gap: 5px;
+      
+    /* TODO 2: For your minmax ( ) function, set a floor (minimum) width in pixels and a ceiling (maximum) width of 1fr */
+    
+    /* TODO 3: Set a small gap for your image gallery*/
+      padding: 15px;
+      
     }
 
-    p {
-      color:red;
+    /* Prevents images from overflowing their respective grid cells */
+    .gallery img {
+      width: 100%;
+   /* TODO 4: Set an image height -- in pixels -- so each image has a clean, uniform look */
+      height: 150px;
+   /* TODO 5: Use CSS object-fit property so your images don't look squished or distorted */
+      object-fit:contain;
+     
+      
+
     }
-
-
   </style>
 </head>
 <body>
-  <p>Just a cool paragraph</p>
-  <p>Sup bro</p>
+<!-- TODO 6: Add a DIV with a class of container -->
+  <div class="container">
+    <div class="gallery">
+      <img src="bridge.jpg" alt="bridge in a forest with moss on it" >
+    </div>
+
+    <div class="gallery">
+      <img src="crystal-sphere-tree.jpg" alt="tree in a crystal sphere">
+    </div>
+
+   <div class="gallery">
+      <img src="fall-lake.jpg" alt="fall season with a lake view">
+    </div>
+
+    <div class="gallery">
+      <img src="flower-field.jpg" alt="flower field">
+    </div>
+
+    <div class="gallery">
+      <img src="lighting-lake.jpg" alt="lake view with lighting in sky">
+    </div>
+
+    <div class="gallery">
+      <img src="lilly-pad.jpg" alt="lillypad">
+    </div>
+
+    <div class="gallery">
+      <img src="misty-moutains.jpg" alt="mist covering moutains">
+    </div>
+
+    <div class="gallery">
+      <img src="spring-swan.jpg" alt="spring season with swans in a pond">
+    </div>
+
+    <div class="gallery">
+      <img src="tiger.jpg" alt="tiger in forest">
+    </div>
+
+    <div class="gallery">
+      <img src="traveler-waterfall.jpg" alt="traveler wearing backpack in fron of waterfall">
+    </div>
+
+    <div class="gallery">
+      <img src="tree-sun.jpg" alt="tree in front of sun">
+    </div>
+
+    <div class="gallery">
+      <img src="water-plant.jpg" alt="plant that has water droplets">
+    </div>
+  
+
+
+
+  </div>
+<!-- TODO 7: Add 12 DIV elements to your container DIV -->
+<!-- NOTE: Each child DIV needs an image element with a custom ALT attribute -->
+
+ 
+
+
 </body>
 </html>
+
