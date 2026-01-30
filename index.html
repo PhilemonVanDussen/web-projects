@@ -5,14 +5,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @font-face {
+      font-family: myFont;
+      src: url(FleurDeLeah-Regular.ttf);
+    }
+
+    :root {
+      font-size: 16px;
+      font-family: myFont;
+    }
+
     body {
       background-color: aqua;
+      max-width: 95%;
+      margin: 5px auto;
     }
     /* TODO 1: Use the grid-template-columns property plus the repeat and minmax functions and the keyword auto-fit to set up your grid */
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-      gap: 5px;
+      gap: 1rem;
       
     /* TODO 2: For your minmax ( ) function, set a floor (minimum) width in pixels and a ceiling (maximum) width of 1fr */
     
@@ -20,69 +38,126 @@
       padding: 15px;
       
     }
-
     /* Prevents images from overflowing their respective grid cells */
     .gallery img {
       width: 100%;
    /* TODO 4: Set an image height -- in pixels -- so each image has a clean, uniform look */
       height: 150px;
    /* TODO 5: Use CSS object-fit property so your images don't look squished or distorted */
-      object-fit:contain;
-     
-      
-
+      object-fit:cover;
     }
+
+    figcaption {
+      text-align: center;
+      margin: 5px 0 0 0;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: blueviolet;
+      background-color: rgba(124, 124, 194, 0.559);
+      border: 2px solid rgba(30, 96, 197, 0.736);
+      padding: 0.25rem;
+  
+    }
+
+    h1 {
+      text-align: center;
+      margin: 10px 0px 10px 0;
+      font-size: 2.5rem;
+    }
+
+
   </style>
 </head>
 <body>
+
+    <h1>Basic Image Gallery</h1>
+  
 <!-- TODO 6: Add a DIV with a class of container -->
   <div class="container">
+
     <div class="gallery">
-      <img src="bridge.jpg" alt="bridge in a forest with moss on it" >
+      <figure class="image image-1">
+        <img src="bridge.jpg" alt="bridge in a forest with moss on it" >
+        <figcaption>Bridge in a forest with moss on it</figcaption>
+      </figure>
     </div>
 
     <div class="gallery">
-      <img src="crystal-sphere-tree.jpg" alt="tree in a crystal sphere">
+      <figure class="image image-1">
+        <img src="crystal-sphere-tree.jpg" alt="tree in half of a crystal sphere">
+        <figcaption>Tree in half of a crystal sphere</figcaption>
+      </figure>
     </div>
 
    <div class="gallery">
-      <img src="fall-lake.jpg" alt="fall season with a lake view">
+      <figure class="image image-1">
+        <img src="fall-lake.jpg" alt="fall season with a lake view">
+        <figcaption>Fall season with a lake view</figcaption>
+      </figure>
+
     </div>
 
     <div class="gallery">
-      <img src="flower-field.jpg" alt="flower field">
+      <figure class="image image-1">
+        <img src="flower-field.jpg" alt="flower field">
+        <figcaption>Flower field with hills</figcaption>
+      </figure>
     </div>
 
     <div class="gallery">
-      <img src="lighting-lake.jpg" alt="lake view with lighting in sky">
+      <figure class="image image-1">
+        <img src="lighting-lake.jpg" alt="lake view with lighting in sky">
+        <figcaption>Lake view with lighting in sky</figcaption>
+      </figure>
     </div>
 
     <div class="gallery">
-      <img src="lilly-pad.jpg" alt="lillypad">
+      <figure class="image image-1">
+        <img src="lilly-pad.jpg" alt="lillypad">
+        <figcaption>Lilly Pad with flower</figcaption>
+      </figure>
     </div>
 
     <div class="gallery">
-      <img src="misty-moutains.jpg" alt="mist covering moutains">
+      <figure class="image image-1">
+        <img src="misty-moutains.jpg" alt="mist covering moutains">
+        <figcaption>Mist covering moutains</figcaption>
+      </figure>
     </div>
 
     <div class="gallery">
-      <img src="spring-swan.jpg" alt="spring season with swans in a pond">
+      <figure class="image image-1">
+        <img src="spring-swan.jpg" alt="spring season with swans in a pond">
+        <figcaption>Spring season with swans in a pond</figcaption>
+      </figure>
     </div>
 
     <div class="gallery">
-      <img src="tiger.jpg" alt="tiger in forest">
+      <figure class="image image-1">
+        <img src="tiger.jpg" alt="tiger in forest">
+        <figcaption>Tiger in the forest</figcaption>
+      </figure>
     </div>
 
     <div class="gallery">
-      <img src="traveler-waterfall.jpg" alt="traveler wearing backpack in fron of waterfall">
+      <figure class="image image-1">
+        <img src="traveler-waterfall.jpg" alt="traveler wearing backpack in fron of waterfall">
+        <figcaption>Traveler in front of waterfall</figcaption>
+      </figure>
     </div>
 
     <div class="gallery">
-      <img src="tree-sun.jpg" alt="tree in front of sun">
+      <figure class="image image-1">
+        <img src="tree-sun.jpg" alt="tree in front of sun">
+        <figcaption>Tree in front of the sun</figcaption>
+      </figure>
     </div>
 
     <div class="gallery">
-      <img src="water-plant.jpg" alt="plant that has water droplets">
+      <figure class="image image-1">
+        <img src="water-plant.jpg" alt="plant that has water droplets">
+        <figcaption>Dew on plant</figcaption>
+      </figure>
     </div>
   
 
